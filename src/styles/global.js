@@ -16,7 +16,6 @@ export default createGlobalStyle`
     background: #191920;
     position: relative;
     -webkit-font-smoothing: antialiased;
-    min-height: 50vh;
   }
 
   body:before {
@@ -27,7 +26,7 @@ export default createGlobalStyle`
     width: 100%;
     height: 400px;
     background: #141419;
-    clip-path: polygon(0 0, 0 80%, 250% 0);
+    clip-path: polygon(0 0, 0 100%, 250% 0);
     z-index: -1;
   }
 
