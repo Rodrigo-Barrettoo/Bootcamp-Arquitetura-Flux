@@ -9,7 +9,7 @@ export const ProductList = styled.ul`
     list-style: none;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
