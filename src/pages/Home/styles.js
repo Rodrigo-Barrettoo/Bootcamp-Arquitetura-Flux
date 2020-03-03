@@ -28,7 +28,7 @@ export const ProductList = styled.ul`
     flex-direction: column;
     background: #fff;
     border-radius: 4px;
-    padding: 20px;
+    padding: 25px;
 
     img {
       align-self: center;
