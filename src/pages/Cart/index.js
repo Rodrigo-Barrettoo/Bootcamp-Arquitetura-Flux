@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
@@ -13,6 +14,16 @@ import { Container, ProductTable, Total } from './styles';
 import * as CartActions from '../../store/modules/cart/actions';
 
 function Cart({ cart, total, removeFromCart, updateAmount }) {
+  Cart.propTypes = {
+    cart: PropTypes.shape({
+      map: PropTypes,
+    }).isRequired,
+
+    total: PropTypes.shape({}).isRequired,
+    removeFromCart: PropTypes.shape({}).isRequired,
+    updateAmount: PropTypes.shape({}).isRequired,
+  };
+
   function increment(product) {
     updateAmount(product.id, product.amount + 1);
   }
@@ -26,11 +37,11 @@ function Cart({ cart, total, removeFromCart, updateAmount }) {
       <ProductTable>
         <thead>
           <tr>
-            <th />
+            <th>{}</th>
             <th>PRODUTO</th>
             <th>QTD</th>
             <th>SUBTOTAL</th>
-            <th />
+            <th>{}</th>
           </tr>
         </thead>
         <tbody>
