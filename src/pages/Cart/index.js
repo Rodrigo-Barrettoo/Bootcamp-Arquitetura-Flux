@@ -13,7 +13,7 @@ import { Container, ProductTable, Total } from './styles';
 
 import * as CartActions from '../../store/modules/cart/actions';
 
-function Cart({ cart, total, removeFromCart, updateAmount }) {
+function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
   Cart.propTypes = {
     cart: PropTypes.shape({
       map: PropTypes,
@@ -21,15 +21,15 @@ function Cart({ cart, total, removeFromCart, updateAmount }) {
 
     total: PropTypes.shape({}).isRequired,
     removeFromCart: PropTypes.shape({}).isRequired,
-    updateAmount: PropTypes.shape({}).isRequired,
+    updateAmountRequest: PropTypes.shape({}).isRequired,
   };
 
   function increment(product) {
-    updateAmount(product.id, product.amount + 1);
+    updateAmountRequest(product.id, product.amount + 1);
   }
 
   function decrement(product) {
-    updateAmount(product.id, product.amount - 1);
+    updateAmountRequest(product.id, product.amount - 1);
   }
 
   return (
