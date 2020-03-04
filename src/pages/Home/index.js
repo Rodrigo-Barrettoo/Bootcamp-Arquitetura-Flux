@@ -74,7 +74,7 @@ const mapStateToProps = state => ({
     amount[product.id] = product.amount;
 
     return amount;
-  }),
+  }, {}),
 });
 
 const mapDispatchToProps = dispatch =>
